@@ -18,7 +18,7 @@ mysql-base:
   mysql_user.present:
     - name: redmine
     - host: localhost
-    - password: "Trumpet25*"
+    - password: "password"
     - require:
       - pkg: python-mysqldb
 
