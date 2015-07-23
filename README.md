@@ -2,4 +2,5 @@ Trying my best to make a saltstack deploy script for this tutorial: http://marti
 
 Only difference is I'm moving it to redmine-2.6 which should be almost exactly the same.
 
+## Current Errors
 
