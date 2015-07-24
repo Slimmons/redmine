@@ -8,7 +8,7 @@ FixRVMProblem:
     - name: sudo gpg --keyserver hkp://keys.gnupg.net:80 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     - cwd: /home/simmons
 
-#The above solution seems to work better.
+#The above solution works sometimes (not all the time), another thing (that sometimes works, is this below)
 #FixRVMProblem:
 #  cmd.run:
 #    - name: command curl -sSL https://rvm.io/mpapis.asc | sudo gpg --import -
