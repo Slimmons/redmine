@@ -1,7 +1,7 @@
 redmine:
   'redmineTest*':
     - ruby
-    - redmine
-    - mysql
-    - configureRedmine
-    - apache
+#    - redmine
+#    - mysql
+#    - configureRedmine
+#    - apache
