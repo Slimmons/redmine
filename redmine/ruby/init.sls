@@ -1,6 +1,17 @@
+createTestFile:
+  cmd.run:
+    - name: touch test.txt
+    - cwd: /home/simmons/
+
 curl:
   pkg:
     - installed
+
+curlComplete:
+  cmd.run:
+    - name: echo "curl" >> test.txt
+    - cwd: /home/simmons/
+ 
 #The commands on the tutorial for here are:
 # sudo apt-get install curl
 # curl -sSL https://get.rvm.io | bash -s stable --ruby=2.0.0
@@ -44,6 +55,11 @@ FixRVMProblem:
     - name: sudo gpg --keyserver hkp://keys.gnupg.net:80 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     - cwd: /home/simmons
 
+####REMOVE THIS LATER####
+fixRVMProblemComplete:
+  cmd.run:
+    - name: echo "FixRVMProblem" >> test.txt
+    - cwd: /home/simmons/
 #The above solution works sometimes (not all the time), another thing (that sometimes works, is this below)
 #FixRVMProblem:
 #  cmd.run:
@@ -55,11 +71,23 @@ rubyWithRVM:
     - name: curl -sSL https://get.rvm.io | bash -s stable --ruby=2.0.0
     - cwd: /home/simmons
 
+####REMOVE THIS LATER####
+rubyWithRVMComplete:
+  cmd.run:
+    - name: echo "rubyWithRVM" >> test.txt
+    - cwd: /home/simmons/
+
 rubyPermissions:
   cmd.run:
     - name: sudo chmod -R 777 /usr/local/rvm/gems/ruby-2.0.0-p643
     - cwd: /home/simmons
     - user: root
+
+####REMOVE THIS LATER####
+rubyPermissionsComplete:
+  cmd.run:
+    - name: echo "rubyPermissions" >> test.txt
+    - cwd: /home/simmons/
 
 useRVM:
   cmd.run:
@@ -67,5 +95,9 @@ useRVM:
     - cwd: /home/simmons
     - user: simmons
 
+useRVMComplete:
+  cmd.run:
+    - name: echo "useRVM" >> test.txt
+    - cwd: /home/simmons/
 #I tried using the method here: http://docs.saltstack.com/en/latest/ref/states/all/salt.states.rvm.html
 #but I had no success in setting up rvm using that state.  I'd love input on how to do that better.
